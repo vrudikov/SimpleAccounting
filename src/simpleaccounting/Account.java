@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Map;
 
 /**
- *
  * @author Travers
  */
 public class Account {
@@ -46,7 +45,6 @@ public class Account {
         public String restOfName;
     }
 
-    
     private String name;
     private Type type;
     protected List<Entry> entries;
@@ -68,7 +66,7 @@ public class Account {
 
     public Account(String name, Type type) {
         AccountName acctName = toAccountName(name);
-        
+
         this.name = acctName.firstName;
         this.type = type;
         this.entries = new ArrayList<Entry>();
@@ -83,7 +81,7 @@ public class Account {
     public List<Entry> getEntries() {
         List<Entry> allEntries = new ArrayList<Entry>(entries);
 
-        for(Account a : subAccounts.values()) {
+        for (Account a : subAccounts.values()) {
             allEntries.addAll(a.getEntries());
         }
 
@@ -121,7 +119,7 @@ public class Account {
     public int getTrialBalance() {
         int balance = 0;
 
-        for( Entry e : getEntries() ) {
+        for (Entry e : getEntries()) {
             balance += e.getAmount();
         }
 

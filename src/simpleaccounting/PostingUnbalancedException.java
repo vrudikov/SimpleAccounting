@@ -7,7 +7,7 @@ package simpleaccounting;
 
 /**
  * Exception thrown with an unbalanced Posting was attempted to be posted.
- * 
+ *
  * @author Travers
  */
 public class PostingUnbalancedException extends AccountingException {

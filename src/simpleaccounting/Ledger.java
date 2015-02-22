@@ -28,7 +28,7 @@ public class Ledger {
     public Account newAccount(String name, Account.Type type) {
         // Split name at ':'
         String names[] = name.split(":");
-        
+
         // Build tree of accounts
         Account lastAccount = null;
         for (int i = 0; i < names.length; i++) {
@@ -38,12 +38,12 @@ public class Ledger {
             Account a = accounts.get(accountName);
 
             // If account doesn't exist then create it with <names[i], type>
-            if( a == null ) {
+            if (a == null) {
                 a = new Account(accountName, type);
             }
 
             // Add this account to the ledger or the last account found
-            if( i == 0 ) {
+            if (i == 0) {
                 accounts.put(accountName, a);
             } else {
                 // Add new account to the previous account

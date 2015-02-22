@@ -6,7 +6,6 @@
 package simpleaccounting;
 
 /**
- *
  * @author Travers
  */
 public class AccountingException extends Exception {

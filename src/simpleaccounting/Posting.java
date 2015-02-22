@@ -24,7 +24,7 @@ public class Posting {
         ledger = l;
         entries = new ArrayList<Entry>();
     }
-    
+
     public List<Entry> getEntries() {
         return entries;
     }
@@ -66,7 +66,7 @@ public class Posting {
     public boolean isBalanced() {
         int balance = 0;
 
-        for( Entry e : entries ) {
+        for (Entry e : entries) {
             balance += e.getAmount();
         }
 
@@ -83,7 +83,7 @@ public class Posting {
             throw new NonExistantAccountException(account);
         }
         entries.add(e);
-        
+
         return this;
     }
 
